@@ -7,9 +7,11 @@ import cors from 'cors'
 import postsRouter from './routes/posts.js'
 import { connectDB } from './config/db.js'
 
-const app = express()(async () => {
+const app = express()
+
+(async () => {
   await connectDB()
-})
+})()
 
 console.log('process.env.CLIENT_URL', process.env.CLIENT_URL)
 
