@@ -17,7 +17,7 @@ console.log('process.env.CLIENT_URL', process.env.CLIENT_URL)
 // app.use(helmet())
 
 app.use(
-  cors()
+  cors({})
   //   cors({
   //     origin: process.env.CLIENT_URL || 'http://localhost:5174'
   //   })
