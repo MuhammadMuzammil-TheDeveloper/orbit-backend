@@ -16,11 +16,12 @@ console.log('process.env.CLIENT_URL', process.env.CLIENT_URL)
 // app.disable('x-powered-by')
 // app.use(helmet())
 
-// app.use(
-//   cors({
-//     origin: process.env.CLIENT_URL || 'http://localhost:5174'
-//   })
-// )
+app.use(
+  cors()
+  //   cors({
+  //     origin: process.env.CLIENT_URL || 'http://localhost:5174'
+  //   })
+)
 
 app.use(express.json({ limit: '32kb' }))
 
