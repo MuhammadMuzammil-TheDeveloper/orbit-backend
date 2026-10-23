@@ -3,9 +3,11 @@ import cors from 'cors'
 // import helmet from 'helmet'
 // import rateLimit from 'express-rate-limit'
 import postsRouter from './routes/posts.js'
+import { connectDB } from './config/db.js'
 
 const app = express()
 
+await connectDB()
 // app.disable('x-powered-by')
 // app.use(helmet())
 
