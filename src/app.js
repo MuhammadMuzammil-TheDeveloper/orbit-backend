@@ -11,6 +11,8 @@ const app = express()
 
 connectDB()
 
+console.log("process.env.CLIENT_URL" , process.env.CLIENT_URL)
+
 // app.disable('x-powered-by')
 // app.use(helmet())
 
