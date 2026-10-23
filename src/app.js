@@ -7,11 +7,11 @@ import cors from 'cors'
 import postsRouter from './routes/posts.js'
 import { connectDB } from './config/db.js'
 
-const app = express()
+const app = express()(async () => {
+  await connectDB()
+})
 
-connectDB()
-
-console.log("process.env.CLIENT_URL" , process.env.CLIENT_URL)
+console.log('process.env.CLIENT_URL', process.env.CLIENT_URL)
 
 // app.disable('x-powered-by')
 // app.use(helmet())
