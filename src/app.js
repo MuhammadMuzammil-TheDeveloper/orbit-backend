@@ -7,7 +7,8 @@ import { connectDB } from './config/db.js'
 
 const app = express()
 
-await connectDB()
+connectDB()
+
 // app.disable('x-powered-by')
 // app.use(helmet())
 
